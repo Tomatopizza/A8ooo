@@ -26,9 +26,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+        '3.36.66.102',
+        'awe3omereview.link',
+        'localhost',
+        '*.awe3omereview.link']
 
 
 # Application definition
@@ -171,7 +175,15 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5500",
     "http://127.0.0.1:5500",
-]
+    "http://front.awe3omereview.link",
+    "http://cdn.awe3omereview.link",
+    "http://awe3omereview.link",
+    "http://3.36.66.102",
+    "https://cdn.awe3omereview.link",
+    "https://front.awe3omereview.link",
+    "https://awe3omereview.link",
+    "https://3.36.66.102"
+    ]
 
 SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
