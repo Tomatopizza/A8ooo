@@ -122,7 +122,6 @@ class ArticlesDetailView(APIView):
         else:
             return Response({"message": "권한이 없습니다!"},status=status.HTTP_400_BAD_REQUEST)
           
-          
 
           
 class ArticleLikesView(APIView):

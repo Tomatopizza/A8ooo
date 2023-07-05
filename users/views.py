@@ -137,7 +137,8 @@ class PasswordTokenCheckAPI(generics.GenericAPIView):
 
     def get(self, request, uidb64, token):
         """ 비밀번호 토큰 자격 GET 요청 """
-        redirect_url = request.GET.get('redirect_url')
+        redirect_url = 'http://127.0.0.1:5500/template/reset_password.html'
+        print("redireccccccccccccccccccccccccccccccccccc",redirect_url)
         
         try:
             user_id = smart_str(urlsafe_base64_decode(uidb64))
